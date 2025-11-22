@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson Schedule - Android App</title>
+    <title>Lesson Schedule - Organize Your Study Time</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset and Base Styles */
         * {
@@ -54,6 +55,12 @@
         .logo h1 {
             font-size: 1.5rem;
             color: #333;
+        }
+        
+        .official-site {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 2px;
         }
         
         nav ul {
@@ -231,6 +238,55 @@
             display: block;
         }
         
+        /* Data Usage Section */
+        .data-usage {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .data-usage-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .data-usage-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .data-usage-content p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .data-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .data-list ul {
+            list-style-type: none;
+        }
+        
+        .data-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .data-list li:before {
+            content: "•";
+            color: #4285f4;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
         /* Download Section */
         .download {
             padding: 80px 0;
@@ -339,22 +395,24 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-content">
-    <div class="logo">
-        <img src="https://i.postimg.cc/7f4Ypqkz/unnamed.jpg" alt="Lesson Schedule Logo">
-        <div>
-            <h1>Lesson Schedule</h1>
-            <p class="official-site">Official App Homepage</p>
-        </div>
-    </div>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <img src="https://i.postimg.cc/7f4Ypqkz/unnamed.jpg" alt="Lesson Schedule Logo">
-                    <h1>Lesson Schedule</h1>
+                    <div>
+                        <h1>Lesson Schedule</h1>
+                        <p class="official-site">Official App Homepage</p>
+                    </div>
                 </div>
+                <nav>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#data-usage">Data Usage</a></li>
+                                            </ul>
+                </nav>
                 
-                            </div>
+            </div>
         </div>
     </header>
 
@@ -366,7 +424,7 @@
                 <p>Keep track of your classes, assignments, and exams with our intuitive lesson scheduling app designed for students.</p>
                 <div class="hero-buttons">
                     <button class="cta-button">Download Now</button>
-                    <button class="secondary-button">Learn More</button>
+                    
                 </div>
             </div>
         </div>
@@ -375,37 +433,40 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            
+            <div class="section-title">
+                <h2>Powerful Features</h2>
+                <p>Our app comes packed with features designed to enhance your study experience</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📅</div>
-                    <h3>Intuitive Interface</h3>
-                    <p>Easy-to-use design that makes scheduling your lessons simple and efficient.</p>
+                    <h3>Schedule Management</h3>
+                    <p>Create and manage weekly lesson schedules for Monday through Friday with custom lesson names, times, and colors.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Smart Organization</h3>
-                    <p>Keep your classes and assignments organized with our intelligent categorization system.</p>
+                    <div class="feature-icon">📝</div>
+                    <h3>Notes & Attachments</h3>
+                    <p>Add detailed notes for each lesson and attach images directly from your gallery with full-screen viewing.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Customizable Settings</h3>
-                    <p>Personalize the app to match your study preferences with extensive customization options.</p>
+                    <div class="feature-icon">⏰</div>
+                    <h3>Smart Reminders</h3>
+                    <p>Set custom reminders for lessons, assignments, and exams with flexible date and time options.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Fast Performance</h3>
-                    <p>Optimized for speed and efficiency, ensuring smooth operation on all devices.</p>
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-Language Support</h3>
+                    <p>Available in English, Lithuanian, and Spanish to accommodate users from different regions.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">☁️</div>
-                    <h3>Cloud Sync</h3>
-                    <p>Seamlessly sync your schedule across all your devices with secure cloud storage.</p>
+                    <h3>Google Drive Backup</h3>
+                    <p>Securely backup your schedule data to Google Drive and restore it when needed.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Privacy Focused</h3>
-                    <p>Your data security is our priority with advanced privacy protection features.</p>
+                    <div class="feature-icon">⚡</div>
+                    <h3>Smart Auto-Fill</h3>
+                    <p>Automatically fills free lesson slots between your regular classes for a complete schedule.</p>
                 </div>
             </div>
         </div>
@@ -439,7 +500,38 @@
         </div>
     </section>
 
-        <!-- Simple Footer -->
+    <!-- Data Usage Section -->
+    <section class="data-usage" id="data-usage">
+        <div class="container">
+            <div class="data-usage-content">
+                <h2>Data Usage & Privacy</h2>
+                <p>We believe in transparency about how your data is used in our application.</p>
+                
+                <div class="data-list">
+                    <h3>Data We Collect and Why:</h3>
+                    <ul>
+                        <li><strong>Schedule Data:</strong> Your lesson schedules, notes, and reminders are stored locally on your device and optionally backed up to your Google Drive account for data preservation.</li>
+                        <li><strong>Images:</strong> Photos you attach to lessons are stored locally on your device and included in Google Drive backups if you enable that feature.</li>
+                        <li><strong>App Preferences:</strong> Language settings and display preferences are stored locally to personalize your experience.</li>
+                        <li><strong>Google Account Information:</strong> When using Google Drive backup, we access only your email address to authenticate and store backup files in your personal Drive storage.</li>
+                    </ul>
+                    
+                    <h3>What We Don't Collect:</h3>
+                    <ul>
+                        <li>We do not collect personal identification information beyond what's necessary for app functionality</li>
+                        <li>We do not share your data with third parties for marketing or advertising purposes</li>
+                        <li>We do not track your usage across other applications or websites</li>
+                    </ul>
+                    
+                    <p>All data processing happens either locally on your device or through secure Google APIs when using backup features. You have full control over your data and can delete it at any time through the app settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Simple Footer -->
     <footer class="simple-footer">
         <div class="container">
             <div class="footer-links">
@@ -462,7 +554,21 @@
                 });
             });
         });
+
+        // Add click handlers for buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('download').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelector('.secondary-button').addEventListener('click', function() {
+            document.getElementById('features').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
-
 </html>
